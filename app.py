@@ -2,12 +2,9 @@ import streamlit as st
 import joblib
 from Bio.SeqUtils.ProtParam import ProteinAnalysis
 import numpy as np
-import pickle
 
-# Load your trained model
-model = joblib.load ('Final Model.pkl')
-with open('top_n_features.pkl', 'rb') as f:
-    top_n_features = pickle.load(f)
+
+
 
 def calculate_aac(sequence):
     protein_analysis = ProteinAnalysis(sequence)
