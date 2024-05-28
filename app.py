@@ -3,7 +3,7 @@ import joblib
 from Bio.SeqUtils.ProtParam import ProteinAnalysis
 import numpy as np
 
-
+model = joblib.load ('Final Model.pkl')
 
 
 def calculate_aac(sequence):
