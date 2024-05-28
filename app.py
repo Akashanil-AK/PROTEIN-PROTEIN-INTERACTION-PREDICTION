@@ -65,9 +65,8 @@ sequence2 = st.text_input('Feature 2')
 
 if st.button('Predict'):
       
-    input_data = preprocess_sequence(sequence1,sequence2)
-    input_select = input_data[:, top_n_features]
-    prediction = model.predict(input_select)
+    input_data = preprocess_sequence(sequence1,sequence2, k=3, max_length=100)
+    prediction = model.predict(input_data)
     if prediction[0] == 1:
             st.write('The given sequences interact.')
     else:
