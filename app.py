@@ -34,7 +34,7 @@ def calculate_pse_aac_type_ii(sequence, k, max_length):
     return np.array(pse_aac)
 
 # Preprocess a single input sequence
-def preprocess_sequence(sequence1, sequence2, k=3, max_length=100):
+def preprocess_sequence(sequence1, sequence2, k=3, max_length=50):
     pse_aac_1 = calculate_pse_aac_type_ii(sequence1, k, max_length)
     pse_aac_2 = calculate_pse_aac_type_ii(sequence2, k, max_length)
     combined_features = np.concatenate((pse_aac_1, pse_aac_2))
