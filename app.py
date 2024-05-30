@@ -47,7 +47,7 @@ def predict_interaction(sequence1, sequence2):
     # Preprocess the input sequences
     input_features = preprocess_sequence(sequence1, sequence2)
     input_features = input_features.reshape(1, -1)
-    input_features_s = input_features_s[:, top_n_features] 
+    input_features_s = input_features[:, top_n_features] 
     
     prediction = model.predict(input_features_s)
     prediction_proba = model.predict_proba(input_features)
