@@ -50,7 +50,7 @@ def predict_interaction(sequence1, sequence2):
     input_features_s = input_features[:, top_n_features] 
     
     prediction = model.predict(input_features_s)
-    prediction_proba = model.predict_proba(input_features)
+    prediction_proba = model.predict_proba(input_features_s)
     
     return prediction # Reshape for a single sample
 
