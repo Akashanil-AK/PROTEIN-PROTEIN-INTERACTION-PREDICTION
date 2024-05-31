@@ -65,12 +65,12 @@ This application allows you to input protein sequences and predict their interac
 st.title('Protein Interaction Predictor')
 
 st.write("""
-Input the protein features to predict interactions.
+Input the protein sequence to predict interactions.
 """)
 
 # Input fields for protein features
-sequence1 = st.text_input('Feature 1')
-sequence2 = st.text_input('Feature 2')
+sequence1 = st.text_input('sequence 1')
+sequence2 = st.text_input('sequence 2')
 # Add more features as needed
 
 
