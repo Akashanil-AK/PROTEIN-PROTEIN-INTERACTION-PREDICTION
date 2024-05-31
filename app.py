@@ -55,7 +55,12 @@ def predict_interaction(sequence1, sequence2):
     return prediction # Reshape for a single sample
 
     # Select top N features
-    
+
+st.sidebar.title("About")
+st.sidebar.write("""
+This application allows you to input protein sequences and predict their interaction.
+
+""")   
 
 st.title('Protein Interaction Predictor')
 
