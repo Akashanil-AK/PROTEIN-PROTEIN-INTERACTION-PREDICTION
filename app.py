@@ -52,7 +52,7 @@ def predict_interaction(sequence1, sequence2):
     prediction = model.predict(input_features_s)
     prediction_proba = model.predict_proba(input_features_s)
     
-    return prediction # Reshape for a single sample
+    return prediction, prediction_proba # Reshape for a single sample
 
     # Select top N features
 
@@ -77,10 +77,11 @@ sequence2 = st.text_input('sequence 2')
 
 if st.button('Predict'):
       
-    prediction = predict_interaction(sequence1, sequence2)
+    prediction, prediction_proba = predict_interaction(sequence1, sequence2)
     if prediction[0] == 1:
             st.write('The given sequnces doesnot interact to each other.')
     else:
             st.write('The given sequnces have interaction')
+            st.write(f'Prediction score: {prediction_proba[0][prediction[0]]:.2f}')
     
     
